@@ -1,46 +1,47 @@
 {
-	"name": "sequoia-cli",
-	"version": "0.5.6",
-	"type": "module",
-	"bin": {
-		"sequoia": "dist/index.js"
-	},
-	"files": [
-		"dist",
-		"README.md",
-		"sequoia.schema.json"
-	],
-	"main": "./dist/index.js",
-	"exports": {
-		".": "./dist/index.js"
-	},
-	"scripts": {
-		"lint": "biome lint --write",
-		"format": "biome format --write",
-		"build": "bun build src/index.ts --target node --outdir dist && mkdir -p dist/components && cp src/components/*.js dist/components/",
-		"test": "bun test",
-		"dev": "bun run build && bun link",
-		"deploy": "bun run build && bun publish"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "^2.3.13",
-		"@types/js-yaml": "^4.0.9",
-		"@types/mime-types": "^3.0.1",
-		"@types/node": "^20"
-	},
-	"peerDependencies": {
-		"typescript": "^5"
-	},
-	"dependencies": {
-		"@atproto/api": "^0.18.17",
-		"@atproto/oauth-client-node": "^0.3.16",
-		"@clack/prompts": "^1.0.0",
-		"cmd-ts": "^0.14.3",
-		"glob": "^13.0.0",
-		"js-yaml": "^4.1.1",
-		"mime-types": "^2.1.35",
-		"minimatch": "^10.1.1",
-		"open": "^11.0.0",
-		"smol-toml": "^1.6.0"
-	}
+  "name": "sequoia-cli",
+  "version": "0.5.6",
+  "type": "module",
+  "bin": {
+    "sequoia": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "sequoia.schema.json"
+  ],
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "lint": "biome lint --write",
+    "format": "biome format --write",
+    "build": "bun build src/index.ts --target node --outdir dist && mkdir -p dist/components && cp src/components/*.js dist/components/",
+    "test": "bun test",
+    "dev": "bun run build && bun link",
+    "deploy": "bun run build && bun publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.3.13",
+    "@types/js-yaml": "^4.0.9",
+    "@types/mime-types": "^3.0.1",
+    "@types/node": "^20"
+  },
+  "peerDependencies": {
+    "typescript": "^6"
+  },
+  "dependencies": {
+    "@atproto/api": "^0.18.17",
+    "@atproto/oauth-client-node": "^0.3.16",
+    "@clack/prompts": "^1.0.0",
+    "bun": "^1.4.2",
+    "cmd-ts": "^0.14.3",
+    "glob": "^13.0.0",
+    "js-yaml": "^4.1.1",
+    "mime-types": "^2.1.35",
+    "minimatch": "^10.1.1",
+    "open": "^11.0.0",
+    "smol-toml": "^1.6.0"
+  }
 }
