@@ -1,6 +1,14 @@
 {
-  "name": "sequoia-monorepo",
-  "private": true,
+  "name": "@cbroome/sequoia-monorepo",
+  "version": "1.0.0",
+  "private": false,
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com"
+  },
   "workspaces": [
     "packages/*",
     "docs"
